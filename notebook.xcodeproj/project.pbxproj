@@ -525,6 +525,7 @@
 				DBCBA5E31F37023B00C39E10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBCBA5E41F37023B00C39E10 /* Build configuration list for PBXNativeTarget "notebookTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +534,7 @@
 				DBCBA5E61F37023B00C39E10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBCBA5E71F37023B00C39E10 /* Build configuration list for PBXNativeTarget "notebookUITests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +543,7 @@
 				DBCBA5E91F37023B00C39E10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

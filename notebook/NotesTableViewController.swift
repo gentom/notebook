@@ -55,6 +55,18 @@ class NotesTableViewController: UITableViewController {
         return cell
     }
     
+    
+    // commitEditingStyle : forRowAt indexPath: により、テーブルビューに追加の編集モードを有効にする
+    // cellを左スワイプした際に削除オプションが表示される
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        // editingStyleが.deleteであるかどうかを調べる
+        if editingStyle == .delete {
+            // notesPathから渡されたindexPathのrowプロパティを使用して、選択されたノートをnotes配列から削除する
+            notes.remove(at: indexPath.row)
+        }
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "displayNote" {
