@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notes-->
+        <!--Note Book-->
         <scene sceneID="452-O6-E57">
             <objects>
                 <tableViewController id="amG-wP-J40" customClass="NotesTableViewController" customModule="notebook" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                             <outlet property="delegate" destination="amG-wP-J40" id="XLl-Ch-e81"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Notes" id="ztQ-AR-fby" userLabel="Notes">
+                    <navigationItem key="navigationItem" title="Note Book" id="ztQ-AR-fby" userLabel="Notes">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dEW-Hi-TVr">
                             <connections>
                                 <segue destination="zmi-3K-aJd" kind="show" identifier="addNote" id="apK-zh-ncU"/>
@@ -76,7 +76,7 @@
             </objects>
             <point key="canvasLocation" x="-23.199999999999999" y="-72.413793103448285"/>
         </scene>
-        <!--Title-->
+        <!--Page-->
         <scene sceneID="X9Q-O2-Xbp">
             <objects>
                 <viewController id="zmi-3K-aJd" customClass="DisplayNoteViewController" customModule="notebook" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                             <constraint firstItem="7Od-Lx-jho" firstAttribute="trailing" secondItem="iEC-3a-6ch" secondAttribute="trailing" id="yBQ-Dk-WUd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="VK8-0s-hy1">
+                    <navigationItem key="navigationItem" title="Page" id="VK8-0s-hy1">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="SKN-g2-9Mi">
                             <connections>
                                 <segue destination="Lpb-UZ-umL" kind="unwind" identifier="cancel" unwindAction="unwindToNotesViewController:" id="p3P-IP-Hov"/>

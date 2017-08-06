@@ -11,7 +11,7 @@ import UIKit
 class NotesTableViewController: UITableViewController {
     
     /*
-     notesプロパティが変更されるたびに、すべてのデータをリロードするよう
+     notesプロパティが変更されるたびに、すべてのデータをリロードするように
      didSetプロパティオブザーバを用いてテーブルビューに通知
     */
     var notes = [Note]() {
@@ -59,16 +59,36 @@ class NotesTableViewController: UITableViewController {
         if let identifier = segue.identifier {
             if identifier == "displayNote" {
                 print("Table view cell tapped")
+                
+                // すべてのテーブルビューは、indexPathForSelecedRowというプロパティを持っている。
+                // ユーザーがテーブルビューからcellを選択した場合、特定のcellのindexPathにアクセス可能
+                // indexPathにはsection,rowのプロパティがあり、選択したテーブルビューのcellをマッピングする
+                // データモデル(ここではnotes配列)に関連付けることができる。
+                let indexPath = tableView.indexPathForSelectedRow!
+                
+                // テーブルビューにはsectionが1つしかないため、対応するindexPathのrowプロパティを使用して
+                // 各cellを一意に識別できる。
+                // indexPath.rowで、タッチされたcellに対応するnotes配列からノートを取り出す。
+                let note = notes[indexPath.row]
+                
+                // ダウンキャスト
+                // segueのdestinationプロパティを使用して、DispalyNoteViewControllerにアクセス
+                let displayNoteViewController = segue.destination as! DisplayNoteViewController
+                
+                // DisplayNoteViewControllerのnoteプロパティを、ユーザーがタッチしたcellに対応するnoteに設定
+                displayNoteViewController.note = note
+                
             } else if identifier == "addNote" {
                 print("+ button tapped")
             }
         }
-    }    
-        
+    }
+    
     @IBAction func unwindToNotesViewController(_ segue: UIStoryboardSegue) {
         
-        // for now, simply defining the method is sufficient.
-        // we'll add code later
+        
         
     }
+    
+    
 }
