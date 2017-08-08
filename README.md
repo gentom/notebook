@@ -8,7 +8,6 @@ https://github.com/gentom/notebook2
 https://github.com/gentom/notebook2   
   
   
-![notebook](https://github.com/gentom/notebook/blob/master/images/notebook.png)  
-
+![notebook](https://github.com/gentom/notebook/blob/master/images/notebook.png)
 ![page](https://github.com/gentom/notebook/blob/master/images/page.png)  
   
