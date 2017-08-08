@@ -2,7 +2,7 @@
 //  DisplayNotesViewController.swift
 //  notebook
 //
-//  Created by Morikawa Gento on 2017/08/06.
+//  Created by Gento Morikawa on 2017/08/06.
 //  Copyright © 2017年 gentom. All rights reserved.
 //
 
